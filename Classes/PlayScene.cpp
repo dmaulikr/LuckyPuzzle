@@ -39,6 +39,7 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     //level
     CCInteger *il = (CCInteger*)dic->objectForKey("level");
     levelValue = il->getValue();
+//    levelValue = 9;
     initDataFromLevel(levelValue);
     
     Size vs = Director::getInstance()->getVisibleSize();
@@ -55,7 +56,7 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     this->addChild(steptext);
     step = steptext;
     
-    auto leveltext = ui::Text::create(StringUtils::format("Level-%d",levelValue), Common_Font, 35);
+    auto leveltext = ui::Text::create(StringUtils::format("Level-%d",(levelValue+1)), Common_Font, 35);
     leveltext -> setPosition(Vec2(vs.width/2 + vo.x, vs.height - bannerHei/2 + vo.y));
     leveltext -> setColor(Color3B::BLACK);
     this->addChild(leveltext);

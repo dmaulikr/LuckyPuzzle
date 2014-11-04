@@ -16,6 +16,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 ../../Classes/CCUMSocialSDK.cpp \
 ../../Classes/DeveloperInfoScence.cpp \
 ../../Classes/GameOverScene.cpp \
+../../Classes/GuideScene.cpp \
 ../../Classes/HelloWorldScene.cpp \
 ../../Classes/jansson/dump.c \
 ../../Classes/jansson/error.c \
@@ -27,12 +28,14 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 ../../Classes/jansson/strconv.c \
 ../../Classes/jansson/utf.c \
 ../../Classes/jansson/value.c \
+../../Classes/LevelScene.cpp \
 ../../Classes/LHLeaderBoard.cpp \
 ../../Classes/LHPauseScene.cpp \
 ../../Classes/LHShareButton.cpp \
 ../../Classes/LocalizedString.cpp \
 ../../Classes/NDKHelper/NDKCallbackNode.cpp \
 ../../Classes/NDKHelper/NDKHelper.cpp \
+../../Classes/PHSprite.cpp \
 ../../Classes/PlayScene.cpp \
 ../../Classes/ThirdPartyHelper.cpp \
 ../../Classes/UMShareButton.cpp

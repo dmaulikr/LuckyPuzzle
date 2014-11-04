@@ -33,22 +33,24 @@ import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.games.Game;
-import com.google.android.gms.games.Games;
-import com.google.android.gms.plus.Plus;
-import com.umeng.social.CCUMSocialController;
-
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.games.Games;
+import com.google.android.gms.plus.Plus;
+import com.umeng.social.CCUMSocialController;
 
 public class AppActivity extends Cocos2dxActivity {
 
@@ -225,7 +227,7 @@ public class AppActivity extends Cocos2dxActivity {
         String playurl = "https://play.google.com/store/apps/details?id=" + appId;
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(playurl));
-        startActivity(i);
+        startActivity(intent);
     }
     
     private String getLan(){
