@@ -1517,7 +1517,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LuckyPuzzle;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fdb67f50-5427-4ae2-9c8e-35c2b0b518a5";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1571,7 +1571,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LuckyPuzzle;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fdb67f50-5427-4ae2-9c8e-35c2b0b518a5";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";

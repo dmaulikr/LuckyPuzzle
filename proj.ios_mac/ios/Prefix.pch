@@ -7,5 +7,5 @@
     #import <UIKit/UIKit.h>
 #endif
 
-#define APP_ID @""
+#define APP_ID @"937114279"
 #define ADMOB_UID @"ca-app-pub-9455502179330810/8164318887"
