@@ -4,8 +4,6 @@
 #include "cocos2d.h"
 #include "UILayout.h"
 
-#define LVCOUNT 10
-
 class LevelScene : public cocos2d::LayerColor
 {
 public:

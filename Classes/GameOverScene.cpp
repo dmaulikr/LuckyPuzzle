@@ -9,7 +9,6 @@
 #include "LocalizedString.h"
 #include "ThirdPartyHelper.h"
 #include "SimpleAudioEngine.h"
-
 USING_NS_CC;
 Scene* GameOverScene::createScene(cocos2d::CCDictionary *dic)
 {
@@ -52,7 +51,7 @@ bool GameOverScene::initDict(cocos2d::CCDictionary *dic)
     UserDefault::getInstance()->flush();
     
     auto gameover = ui::Text::create(StringUtils::format("Level %d Pass!",level+1), Common_Font, 70);
-    gameover->setPosition(Vec2(vs.width/2, vs.height/3*2));
+    gameover->setPosition(Vec2(vs.width/2, vs.height/3*2 + vo.y));
     gameover->setColor(Color3B::BLACK);
     this->addChild(gameover);
     show(gameover);
@@ -64,33 +63,37 @@ bool GameOverScene::initDict(cocos2d::CCDictionary *dic)
     }
     
     auto scorelabel = ui::Text::create(StringUtils::format("Step:%d",step), Common_Font, 50);
-    scorelabel->setPosition(Vec2(vs.width/2, vs.height/2+scorelabel->getContentSize().height/2));
+    scorelabel->setPosition(Vec2(vs.width/2, vs.height/2+scorelabel->getContentSize().height/2 + vo.y));
     scorelabel->setColor(Color3B::BLACK);
     this->addChild(scorelabel);
     show(scorelabel);
     
     auto bestlabel = ui::Text::create(StringUtils::format("Best:%d",best), Common_Font, 50);
-    bestlabel->setPosition(Vec2(vs.width/2, vs.height/2-bestlabel->getContentSize().height/2));
+    bestlabel->setPosition(Vec2(vs.width/2, vs.height/2-bestlabel->getContentSize().height/2 + vo.y));
     bestlabel->setColor(Color3B::BLACK);
     this->addChild(bestlabel);
     show(bestlabel);
     
-    float by = vs.height/6;
+    float by = vs.height/6 + vo.y;
     float fs = 40;
     
-    auto replay = ui::Button::create("rb.png");
-    replay->setTitleText("Next");
-    replay->setTitleFontSize(fs);
-    replay->setPosition(Vec2(vs.width/2, vs.height/3));
-    replay->addTouchEventListener([level](Ref *ps,ui::Widget::TouchEventType type){
-        if (type == ui::Widget::TouchEventType::ENDED) {
-            Dictionary *dict = Dictionary::create();
-            dict->setObject(CCInteger::create(level+1),"level");
-            Director::getInstance()->replaceScene(PlayScene::createScene(dict));
-        }
-    });
-    this->addChild(replay);
-    show(replay);
+    if (level >= LVCOUNT-1) {
+        
+    }else{
+        auto replay = ui::Button::create("rb.png");
+        replay->setTitleText("Next");
+        replay->setTitleFontSize(fs);
+        replay->setPosition(Vec2(vs.width/2, vs.height/3 + vo.y));
+        replay->addTouchEventListener([level](Ref *ps,ui::Widget::TouchEventType type){
+            if (type == ui::Widget::TouchEventType::ENDED) {
+                Dictionary *dict = Dictionary::create();
+                dict->setObject(CCInteger::create(level+1),"level");
+                Director::getInstance()->replaceScene(PlayScene::createScene(dict));
+            }
+        });
+        this->addChild(replay);
+        show(replay);
+    }
     
     auto back = ui::Button::create("rr.png");
     back->setPosition(Vec2(vs.width/3, by));

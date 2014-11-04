@@ -79,6 +79,9 @@
 		A53D15E11A07CFBB00727F06 /* puzzle9.json in Resources */ = {isa = PBXBuildFile; fileRef = A53D15D21A07CFBB00727F06 /* puzzle9.json */; };
 		A53D15EC1A08B0AD00727F06 /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = A53D15EB1A08B0AD00727F06 /* move.wav */; };
 		A53D15EE1A08B1E700727F06 /* seegod.wav in Resources */ = {isa = PBXBuildFile; fileRef = A53D15ED1A08B1E700727F06 /* seegod.wav */; };
+		A53D15F21A08CF4300727F06 /* puzzle11.json in Resources */ = {isa = PBXBuildFile; fileRef = A53D15EF1A08CF4300727F06 /* puzzle11.json */; };
+		A53D15F31A08CF4300727F06 /* puzzle12.json in Resources */ = {isa = PBXBuildFile; fileRef = A53D15F01A08CF4300727F06 /* puzzle12.json */; };
+		A53D15F61A08CFB400727F06 /* puzzle10.json in Resources */ = {isa = PBXBuildFile; fileRef = A53D15F51A08CFB400727F06 /* puzzle10.json */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
 		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
@@ -372,6 +375,9 @@
 		A53D15D21A07CFBB00727F06 /* puzzle9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle9.json; sourceTree = "<group>"; };
 		A53D15EB1A08B0AD00727F06 /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
 		A53D15ED1A08B1E700727F06 /* seegod.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = seegod.wav; sourceTree = "<group>"; };
+		A53D15EF1A08CF4300727F06 /* puzzle11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle11.json; sourceTree = "<group>"; };
+		A53D15F01A08CF4300727F06 /* puzzle12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle12.json; sourceTree = "<group>"; };
+		A53D15F51A08CFB400727F06 /* puzzle10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle10.json; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
 		A5547472196EBD1400F152D3 /* UMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMShareButton.h; path = ../Classes/UMShareButton.h; sourceTree = "<group>"; };
 		A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCUMSocialSDK.cpp; path = ../Classes/CCUMSocialSDK.cpp; sourceTree = "<group>"; };
@@ -754,6 +760,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A53D15F51A08CFB400727F06 /* puzzle10.json */,
+				A53D15EF1A08CF4300727F06 /* puzzle11.json */,
+				A53D15F01A08CF4300727F06 /* puzzle12.json */,
 				A53D15ED1A08B1E700727F06 /* seegod.wav */,
 				A53D15EB1A08B0AD00727F06 /* move.wav */,
 				A53D15CA1A07CFBB00727F06 /* puzzle1.json */,
@@ -1287,9 +1296,11 @@
 				A53D15E01A07CFBB00727F06 /* puzzle8.json in Resources */,
 				A51CE8FC19D056DD0032C075 /* Images.xcassets in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				A53D15F61A08CFB400727F06 /* puzzle10.json in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				A5AA4316196D299D00DC3411 /* UMSLoginViewController.xib in Resources */,
 				A5AA4318196D299D00DC3411 /* UMSShareListController.xib in Resources */,
+				A53D15F31A08CF4300727F06 /* puzzle12.json in Resources */,
 				A53D15EC1A08B0AD00727F06 /* move.wav in Resources */,
 				A5AA4312196D299D00DC3411 /* UMSCommentInputController.xib in Resources */,
 				A59A47801952AD1100217F27 /* README.txt in Resources */,
@@ -1302,6 +1313,7 @@
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				A5AA431F196D299D00DC3411 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				A53D15F21A08CF4300727F06 /* puzzle11.json in Resources */,
 				A5AA4317196D299D00DC3411 /* UMSnsAccountViewController.xib in Resources */,
 				A594BDD119470429001DEF30 /* play.png in Resources */,
 				A577E96E19810ABA0006052B /* en_ls.plist in Resources */,

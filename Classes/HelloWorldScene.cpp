@@ -63,7 +63,7 @@ bool HelloWorld::init()
     this->addChild(play);
     
     auto ud = UserDefault::getInstance();
-    if (ud->getIntegerForKey("level9_step", 0)!=0) {
+    if (ud->getIntegerForKey(StringUtils::format("level%d_step",LVCOUNT-1).c_str(), 0)!=0) {
         int total = 0;
         for (int i =0 ; i<LVCOUNT; i++) {
             int step = UserDefault::getInstance()->getIntegerForKey(StringUtils::format("level%d_step",i).c_str(),0);

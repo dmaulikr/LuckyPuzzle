@@ -79,7 +79,6 @@ ui::Layout* LevelScene::getUI(int levelindex){
     lo->addChild(leveltext);
     
     int step = UserDefault::getInstance()->getIntegerForKey(StringUtils::format("level%d_step",levelindex).c_str(),0);
-//    int score = UserDefault::getInstance()->getIntegerForKey(StringUtils::format("level%d_score",levelindex).c_str(),0);
     bool lock = UserDefault::getInstance()->getBoolForKey(StringUtils::format("level%d_lock",levelindex).c_str(), true);
     if (lock) {
         auto sp = Sprite::create("q.png");
@@ -89,12 +88,8 @@ ui::Layout* LevelScene::getUI(int levelindex){
     }else{
         auto text = ui::Text::create(StringUtils::format("step:%d",step), Common_Font, 40);
         text->setTouchEnabled(false);
-//        text->setColor(Color3B::BLACK);
         text->setPosition(Vec2(los.width/3*2, los.height/2));
         lo->addChild(text);
-//        auto scoretext = ui::Text::create(StringUtils::format("score:%d",score), Common_Font, 30);
-//        scoretext->setPosition(Vec2(los.width/2, los.height/4));
-//        lo->addChild(scoretext);
     }
     
     return lo;

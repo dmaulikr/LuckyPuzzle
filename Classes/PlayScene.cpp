@@ -39,7 +39,6 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     //level
     CCInteger *il = (CCInteger*)dic->objectForKey("level");
     levelValue = il->getValue();
-//    levelValue = 9;
     initDataFromLevel(levelValue);
     
     Size vs = Director::getInstance()->getVisibleSize();
@@ -56,7 +55,9 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     this->addChild(steptext);
     step = steptext;
     
-    auto leveltext = ui::Text::create(StringUtils::format("Level-%d",(levelValue+1)), Common_Font, 35);
+    int beststep = UserDefault::getInstance()->getIntegerForKey(StringUtils::format("level%d_step",levelValue).c_str(),0);
+    
+    auto leveltext = ui::Text::create(StringUtils::format("Level-%d Best:%d",(levelValue+1),beststep), Common_Font, 35);
     leveltext -> setPosition(Vec2(vs.width/2 + vo.x, vs.height - bannerHei/2 + vo.y));
     leveltext -> setColor(Color3B::BLACK);
     this->addChild(leveltext);
@@ -73,6 +74,7 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
     });
     this->addChild(play);
     
+    int fblueC = 0;
     for (int i = 0 ; i<HEI; i++) {
         for (int j = 0 ; j<WID; j++) {
             int tag = from[i][j];
@@ -87,14 +89,17 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
                 sp->setTag(RED);
                 this->addRectAt(sp,i,j,false);
             }else{
+                fblueC++;
                 auto sp = Sprite::create("rb.png");
                 sp->setTag(BLUE);
                 this->addRectAt(sp,i,j,false);
             }
         }
     }
+    log("from blueC %d",fblueC);
     
     //target
+    int tblueC = 0;
     for (int i = 0 ; i<HEI; i++) {
         for (int j = 0 ; j<WID; j++) {
             int tag = target[i][j];
@@ -107,12 +112,15 @@ bool PlayScene::initDict(cocos2d::CCDictionary *dic)
                 sp->setTag(RED);
                 this->addRectAt(sp,i,j,true);
             }else{
+                tblueC ++;
                 auto sp = Sprite::create("rb.png");
                 sp->setTag(BLUE);
                 this->addRectAt(sp,i,j,true);
             }
         }
     }
+    log("target blueC %d",tblueC);
+    CCASSERT(fblueC == tblueC, "blue must be the same");
     
     auto lis = EventListenerTouchOneByOne::create();
     lis->setSwallowTouches(true);
