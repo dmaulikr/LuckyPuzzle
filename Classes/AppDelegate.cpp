@@ -48,6 +48,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
         UserDefault::getInstance()->setBoolForKey(StringUtils::format("level%d_lock",0).c_str(), false);
         UserDefault::getInstance()->flush();
     }
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("move.wav");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("seegod.wav");
 
     // run
     director->runWithScene(scene);

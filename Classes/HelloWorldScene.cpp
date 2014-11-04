@@ -90,7 +90,7 @@ bool HelloWorld::init()
     }
     
     auto debt = DeveloperInfo::DevInfoButton("devinfo.png");
-    debt->setPosition(Vec2(visibleSize.width - 80 + origin.x, visibleSize.height - 180 + origin.y));
+    debt->setPosition(Vec2(appname->getPositionX() + appname->getContentSize().width/2 + 40, appname->getPositionY() + appname->getContentSize().height/2 + 20));
     this->addChild(debt);
     
     return true;

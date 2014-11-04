@@ -214,7 +214,7 @@
     // Add your publisher ID here and fill in the GADAdSize constant for the ad
     // you would like to request.
     bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
-    bannerView_.adUnitID = @"a153a14e5305ecd";
+    bannerView_.adUnitID = ADMOB_UID;
     bannerView_.delegate = self;
     [bannerView_ setRootViewController:self];
     

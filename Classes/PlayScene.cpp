@@ -226,6 +226,8 @@ void PlayScene::moveWhiteTo(int i, int j){
         step->setString(StringUtils::format("%d",stepValue));
         
         if (this->checkWin()) {
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("seegod.wav");
+            
             Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(this);
             Size vs = Director::getInstance()->getVisibleSize();
             Vec2 vo = Director::getInstance()->getVisibleOrigin();
@@ -234,9 +236,11 @@ void PlayScene::moveWhiteTo(int i, int j){
             
             auto winlay = ui::Layout::create();
             winlay->setSize(vs);
-            winlay->setPosition(topos);
-            auto text = ui::Text::create("You Win!", Common_Font, 40);
+            auto text = ui::Text::create("You Win!", Common_Font, 55);
             winlay->addChild(text);
+            text->setPosition(topos);
+            text->setColor(Color3B::GREEN);
+            
             this->addChild(winlay);
             
             auto dl = DelayTime::create(1);
@@ -251,6 +255,8 @@ void PlayScene::moveWhiteTo(int i, int j){
             this->runAction(sq);
             
             return;
+        }else{
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("move.wav");
         }
     });
     auto sq = Sequence::create(mvt2,call, NULL);

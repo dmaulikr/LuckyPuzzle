@@ -8,3 +8,4 @@
 #endif
 
 #define APP_ID @""
+#define ADMOB_UID @"ca-app-pub-9455502179330810/8164318887"

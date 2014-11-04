@@ -108,7 +108,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 		mAdView = new AdView(this);
 		mAdView.setAdSize(AdSize.BANNER);
-		mAdView.setAdUnitId("a153a14e5305ecd");
+		mAdView.setAdUnitId("ca-app-pub-9455502179330810/2117785287");
 
 		// Create an ad request.
 		AdRequest.Builder adRequestBuilder = new AdRequest.Builder();

@@ -77,6 +77,8 @@
 		A53D15DF1A07CFBB00727F06 /* puzzle7.json in Resources */ = {isa = PBXBuildFile; fileRef = A53D15D01A07CFBB00727F06 /* puzzle7.json */; };
 		A53D15E01A07CFBB00727F06 /* puzzle8.json in Resources */ = {isa = PBXBuildFile; fileRef = A53D15D11A07CFBB00727F06 /* puzzle8.json */; };
 		A53D15E11A07CFBB00727F06 /* puzzle9.json in Resources */ = {isa = PBXBuildFile; fileRef = A53D15D21A07CFBB00727F06 /* puzzle9.json */; };
+		A53D15EC1A08B0AD00727F06 /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = A53D15EB1A08B0AD00727F06 /* move.wav */; };
+		A53D15EE1A08B1E700727F06 /* seegod.wav in Resources */ = {isa = PBXBuildFile; fileRef = A53D15ED1A08B1E700727F06 /* seegod.wav */; };
 		A5547470196D8E2D00F152D3 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
 		A5547473196EBD1400F152D3 /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547471196EBD1400F152D3 /* UMShareButton.cpp */; };
 		A5547477196EBD6200F152D3 /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */; };
@@ -368,6 +370,8 @@
 		A53D15D01A07CFBB00727F06 /* puzzle7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle7.json; sourceTree = "<group>"; };
 		A53D15D11A07CFBB00727F06 /* puzzle8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle8.json; sourceTree = "<group>"; };
 		A53D15D21A07CFBB00727F06 /* puzzle9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle9.json; sourceTree = "<group>"; };
+		A53D15EB1A08B0AD00727F06 /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
+		A53D15ED1A08B1E700727F06 /* seegod.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = seegod.wav; sourceTree = "<group>"; };
 		A5547471196EBD1400F152D3 /* UMShareButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UMShareButton.cpp; path = ../Classes/UMShareButton.cpp; sourceTree = "<group>"; };
 		A5547472196EBD1400F152D3 /* UMShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UMShareButton.h; path = ../Classes/UMShareButton.h; sourceTree = "<group>"; };
 		A5547474196EBD6200F152D3 /* CCUMSocialSDK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCUMSocialSDK.cpp; path = ../Classes/CCUMSocialSDK.cpp; sourceTree = "<group>"; };
@@ -750,6 +754,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A53D15ED1A08B1E700727F06 /* seegod.wav */,
+				A53D15EB1A08B0AD00727F06 /* move.wav */,
 				A53D15CA1A07CFBB00727F06 /* puzzle1.json */,
 				A53D15CB1A07CFBB00727F06 /* puzzle2.json */,
 				A53D15CC1A07CFBB00727F06 /* puzzle3.json */,
@@ -1284,6 +1290,7 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				A5AA4316196D299D00DC3411 /* UMSLoginViewController.xib in Resources */,
 				A5AA4318196D299D00DC3411 /* UMSShareListController.xib in Resources */,
+				A53D15EC1A08B0AD00727F06 /* move.wav in Resources */,
 				A5AA4312196D299D00DC3411 /* UMSCommentInputController.xib in Resources */,
 				A59A47801952AD1100217F27 /* README.txt in Resources */,
 				A5AA430E196D299D00DC3411 /* UMSocialLocalizable.strings in Resources */,
@@ -1298,6 +1305,7 @@
 				A5AA4317196D299D00DC3411 /* UMSnsAccountViewController.xib in Resources */,
 				A594BDD119470429001DEF30 /* play.png in Resources */,
 				A577E96E19810ABA0006052B /* en_ls.plist in Resources */,
+				A53D15EE1A08B1E700727F06 /* seegod.wav in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				A53D15BD1A076E7600727F06 /* rb.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
@@ -1458,7 +1466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1497,7 +1505,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LuckyPuzzle;
-				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1514,7 +1522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jian Bang (LLWK678A7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1551,7 +1559,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = LuckyPuzzle;
-				PROVISIONING_PROFILE = "AE41FA0A-450D-43B7-85E2-BB867294E493";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
